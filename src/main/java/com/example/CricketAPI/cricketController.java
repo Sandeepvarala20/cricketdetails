@@ -1,15 +1,14 @@
 package com.example.CricketAPI;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-@RestController
+
 public class cricketController extends cricketUtils{
 	
-	@GetMapping("/getdetails")
+	@GetMapping("/getdetails.json")
     public String Handler() {
 		return getMatchesDetails();
     }
-	@GetMapping("/getSeriesDetails")
+	@GetMapping("/getSeriesDetails.json")
     public String SeriesHandler() {
 		return getSeriesDetails();
     }
